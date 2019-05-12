@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
-import todos from './todos';
 
 const reducers = combineReducers({
-  todos,
+  example: () => [],
 });
 
 export default reducers;
