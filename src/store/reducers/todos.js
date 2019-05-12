@@ -1,9 +1,11 @@
-const INITIAL_STATE = [{ id: 1, text: 'Lanchar' }, { id: 2, text: 'Assistir Game of Thrones' }];
+const INITIAL_STATE = [];
 
 export default function todos(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'ADD_TODO':
       return [...state, { id: state.length + 1, text: action.payload.text }];
+    case 'REMOVE_TODO':
+      return state.filter(todo => todo.id !== action.payload.id);
     default:
       return state;
   }
