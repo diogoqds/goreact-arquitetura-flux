@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import favorites from './favorites';
 
 const reducers = combineReducers({
-  example: () => [],
+  favorites,
 });
 
 export default reducers;
